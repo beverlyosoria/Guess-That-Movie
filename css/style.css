@@ -1,0 +1,17 @@
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 30vmin 15vmin 30vmin;
+    grid-template-rows: 10vmin 10vmin 30vmin 10vmin;
+}
