@@ -70,11 +70,15 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
-let score, imageSet, answers;
+let score, imageSet, answers, guesses;
 
 /*----- cached element references -----*/
 
+const guessesEL = document.getElementById('guesses');
+
+const images = document.getElementById('img1, img2, img3');
 /*----- event listeners -----*/
+
 
 /*----- functions -----*/
 init();
@@ -86,6 +90,11 @@ function init() {
     imageSet = image.set1;
 
     answers = [];
+
+    guesses = 3;
 }
 
-var images = document.getElementById('img1, img2, img3')
+function render() {
+    // Render score
+
+}
