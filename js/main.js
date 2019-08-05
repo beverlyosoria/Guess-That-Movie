@@ -73,7 +73,7 @@ const images = {
 let score, imageSet, answers, guesses;
 
 /*----- cached element references -----*/
-
+// Set elements to variable 
 const guessesEL = document.getElementById('guesses');
 
 const images = document.getElementById('img1, img2, img3');
@@ -83,7 +83,7 @@ const images = document.getElementById('img1, img2, img3');
 /*----- functions -----*/
 init();
 
-// Initializes the variables 
+// Initialize the variables 
 function init() {
     score = 0;
 
