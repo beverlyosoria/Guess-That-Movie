@@ -4,47 +4,65 @@ const images = {
     set1: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set2: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set3: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set4: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set5: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set6: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set7: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set9: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
     set10: {
         'img1': '',
         'img2': '',
-        'img3': ''
+        'img3': '',
+
+        answer: ''
     },
 }
 
@@ -52,7 +70,7 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
-let score, imageSet, answer;
+let score, imageSet, answers;
 
 /*----- cached element references -----*/
 
@@ -67,5 +85,7 @@ function init() {
 
     imageSet = image.set1;
 
-    answer = [];
+    answers = [];
 }
+
+var images = document.getElementById('img1, img2, img3')
