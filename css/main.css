@@ -1,0 +1,31 @@
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-color: pink;
+
+}
+
+main {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+
+}
+
+footer {
+    background-color: blueviolet;
+}
