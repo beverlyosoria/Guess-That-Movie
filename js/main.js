@@ -6,63 +6,72 @@ const images = {
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set2: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set3: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set4: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set5: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set6: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set7: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set9: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
     set10: {
         'img1': '',
         'img2': '',
         'img3': '',
 
-        answer: ''
+        answer: '',
+        hint: ''
     },
 }
 
@@ -90,6 +99,8 @@ function init() {
     imageSet = image.set1;
 
     answers = [];
+
+    hint = [];
 
     guesses = 3;
 }

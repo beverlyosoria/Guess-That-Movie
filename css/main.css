@@ -5,7 +5,7 @@ html * {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 30vmin 10vmin 10vmin;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,12 +17,17 @@ header {
     display: flex;
     background-color: pink;
 
+
+
+
 }
 
 main {
     background-color: aqua;
     display: flex;
     flex-direction: row;
+    border-radius: 3vmin;
+
 
 }
 
