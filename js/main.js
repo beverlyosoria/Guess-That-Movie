@@ -52,9 +52,20 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
+let score, imageSet, answer;
 
 /*----- cached element references -----*/
 
 /*----- event listeners -----*/
 
 /*----- functions -----*/
+init();
+
+// Initializes the variables 
+function init() {
+    score = 0;
+
+    imageSet = image.set1;
+
+    answer = [];
+}
