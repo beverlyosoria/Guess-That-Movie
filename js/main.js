@@ -2,6 +2,14 @@
 //Object that stores set of images
 const images = {
     set1: {
+        'img1': 'images/motel.jpg',
+        'img2': 'images/knife.jpg',
+        'img3': 'images/shower.jpg',
+
+        answer: 'Psycho',
+        hint: ''
+    },
+    set2: {
         'img1': 'images/man.png',
         'img2': 'images/ear.png',
         'img3': 'images/briefcase.png',
@@ -9,21 +17,13 @@ const images = {
         answer: 'Reservoir Dogs',
         hint: '"Are you gonna bark all day little doggy or are you gonna bite?'
     },
-    set2: {
+    set3: {
         'img1': 'images/wrestler.png',
         'img2': 'images/greyjoggers.jpg',
         'img3': 'images/chips.jpg',
 
         answer: 'Nacho Libre',
         hint: '"Do you not realize I have had diarrhea since Easters?"'
-    },
-    set3: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
-
-        answer: '',
-        hint: ''
     },
     set4: {
         'img1': '',
@@ -79,7 +79,7 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
-let score, imageSet, answers, guesses;
+let score, imageSet, answers, guesses, count;
 
 /*----- cached element references -----*/
 // Set elements to variable 
@@ -109,6 +109,8 @@ function init() {
 
     hint = [];
 
+    count = 2;
+
     guesses = 3;
     render();
 }
@@ -119,14 +121,23 @@ function render() {
     imageEl.forEach(function (element, id) {
         element.src = imageSet[`img${id + 1}`]
     })
-
     guessesEL.textContent = `Number of guesses remaining: ${guesses}`;
 }
 
 function handleSubmit(evt) {
-    document.querySelector('input').value;
+    var checkAnswer = inputEl.value;
 
+    if (checkAnswer === imageSet.answer) {
+        imageSet = images[`set${count}`]
+
+    } else {
+
+        console.log('wrong')
+    }
+    count++
+    render();
 }
+
 
 function handleHint(evt) {
 

@@ -1,5 +1,6 @@
 html * {
     box-sizing: border-box;
+
 }
 
 body {
@@ -11,32 +12,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
 }
 
 header {
     display: flex;
-    background-color: pink;
-
-
-
-
+    align-items: center;
+    height: 30vh;
+    width: 100vmin;
+    text-align: center;
 }
 
 main {
-    background-color: aqua;
     display: flex;
     flex-direction: row;
     border-radius: 3vmin;
-
-
-}
-
-footer {
-
-    background-color: blueviolet;
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 350px;
+    padding: 10px;
+    margin: 10px;
 }
