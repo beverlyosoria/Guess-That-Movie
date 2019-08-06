@@ -6,16 +6,16 @@ const images = {
         'img2': 'images/ear.png',
         'img3': 'images/briefcase.png',
 
-        answer: '',
-        hint: ''
+        answer: 'Reservoir Dogs',
+        hint: '"Are you gonna bark all day little doggy or are you gonna bite?'
     },
     set2: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/wrestler.png',
+        'img2': 'images/greyjoggers.jpg',
+        'img3': 'images/chips.jpg',
 
-        answer: '',
-        hint: ''
+        answer: 'Nacho Libre',
+        hint: '"Do you not realize I have had diarrhea since Easters?"'
     },
     set3: {
         'img1': '',
@@ -84,17 +84,16 @@ let score, imageSet, answers, guesses;
 /*----- cached element references -----*/
 // Set elements to variable 
 const guessesEL = document.getElementById('guesses');
-
-// select all the img tags 
-const imageEl = document.querySelectorAll('img')
+const imageEl = document.querySelectorAll('img');
+const inputEl = document.getElementById('input')
 
 /*----- event listeners -----*/
 document
-    .getElementById("hintbtn")
+    .getElementById("hint")
     .addEventListener("click", handleHint);
 
 document
-    .getElementById("submitbtn")
+    .getElementById("submit")
     .addEventListener("click", handleSubmit)
 
 /*----- functions -----*/
@@ -121,17 +120,12 @@ function render() {
         element.src = imageSet[`img${id + 1}`]
     })
 
-    guessesEL.textContent = `You have ${guesses} guesses left`;
-
-}
-
-function displayImages() {
-    document.querySelector("main").src = images[imgIndex].src;
-
+    guessesEL.textContent = `Number of guesses remaining: ${guesses}`;
 }
 
 function handleSubmit(evt) {
-    console.log('clicked')
+    document.querySelector('input').value;
+
 }
 
 function handleHint(evt) {
