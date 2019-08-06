@@ -5,7 +5,7 @@ html * {
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30vmin 10vmin 10vmin;
+    grid-template-rows: 1fr auto 1fr;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,5 +32,11 @@ main {
 }
 
 footer {
+
     background-color: blueviolet;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }

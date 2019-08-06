@@ -2,9 +2,9 @@
 //Object that stores set of images
 const images = {
     set1: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/man.png',
+        'img2': 'images/ear.png',
+        'img3': 'images/briefcase.png',
 
         answer: '',
         hint: ''
@@ -85,9 +85,17 @@ let score, imageSet, answers, guesses;
 // Set elements to variable 
 const guessesEL = document.getElementById('guesses');
 
-const images = document.getElementById('img1, img2, img3');
-/*----- event listeners -----*/
+// select all the img tags 
+const imageEl = document.querySelectorAll('img')
 
+/*----- event listeners -----*/
+document
+    .getElementById("hintbtn")
+    .addEventListener("click", handleHint);
+
+document
+    .getElementById("submitbtn")
+    .addEventListener("click", handleSubmit)
 
 /*----- functions -----*/
 init();
@@ -96,16 +104,39 @@ init();
 function init() {
     score = 0;
 
-    imageSet = image.set1;
+    imageSet = images.set1;
 
     answers = [];
 
     hint = [];
 
     guesses = 3;
+    render();
 }
 
+
 function render() {
-    // Render score
+
+    imageEl.forEach(function (element, id) {
+        element.src = imageSet[`img${id + 1}`]
+    })
+
+    guessesEL.textContent = `You have ${guesses} guesses left`;
+
+}
+
+function displayImages() {
+    document.querySelector("main").src = images[imgIndex].src;
+
+}
+
+function handleSubmit(evt) {
+    console.log('clicked')
+}
+
+function handleHint(evt) {
+
+    console.log('clicked')
+
 
 }
