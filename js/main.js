@@ -2,20 +2,20 @@
 //Object that stores set of images
 const images = {
     set1: {
-        'img1': 'images/motel.jpg',
-        'img2': 'images/knife.jpg',
-        'img3': 'images/shower.jpg',
+        'img1': 'images/coat.jpg',
+        'img2': 'images/sunglasses.jpg',
+        'img3': 'images/pills.jpg',
 
-        answer: 'PSYCHO',
-        hint: 'Fact:'
+        answer: 'THE MATRIX',
+        hint: 'Quote:"There is a difference between knowing the path and walking the path"'
     },
     set2: {
-        'img1': 'images/man.png',
-        'img2': 'images/ear.png',
-        'img3': 'images/briefcase.png',
+        'img1': 'images/motel.jpg',
+        'img2': 'images/knife.jpg',
+        'img3': 'images/psycho.jpg',
 
-        answer: 'RESERVIOR DOGS',
-        hint: 'Quote: "Are you gonna bark all day little doggy or are you gonna bite?"'
+        answer: 'PSYCHO',
+        hint: 'Fact: Released in 1960 and was directed by Alfred Hitchcock'
     },
     set3: {
         'img1': 'images/wrestler.png',
