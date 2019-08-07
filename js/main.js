@@ -6,7 +6,7 @@ const images = {
         'img2': 'images/knife.jpg',
         'img3': 'images/shower.jpg',
 
-        answer: 'Psycho',
+        answer: 'PSYCHO',
         hint: ''
     },
     set2: {
@@ -14,7 +14,7 @@ const images = {
         'img2': 'images/ear.png',
         'img3': 'images/briefcase.png',
 
-        answer: 'Reservoir Dogs',
+        answer: 'RESERVIOR DOGS',
         hint: '"Are you gonna bark all day little doggy or are you gonna bite?'
     },
     set3: {
@@ -22,7 +22,7 @@ const images = {
         'img2': 'images/greyjoggers.jpg',
         'img3': 'images/chips.jpg',
 
-        answer: 'Nacho Libre',
+        answer: 'NACHO LIBRE',
         hint: '"Do you not realize I have had diarrhea since Easters?"'
     },
     set4: {
@@ -125,18 +125,15 @@ function render() {
 }
 
 function handleSubmit(evt) {
-    var checkAnswer = inputEl.value;
-
+    var checkAnswer = inputEl.value.toUpperCase();
+    console.log(checkAnswer)
     if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
         swal.fire({
             type: 'success',
             text: 'Correct!',
         })
-
-
     } else {
-
         swal.fire({
             type: 'error',
             text: 'Try Again!',
@@ -149,7 +146,7 @@ function handleSubmit(evt) {
 
 function handleHint(evt) {
 
-    console.log('clicked')
+
 
 
 }
