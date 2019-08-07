@@ -7,7 +7,7 @@ const images = {
         'img3': 'images/shower.jpg',
 
         answer: 'PSYCHO',
-        hint: ''
+        hint: 'Fact:'
     },
     set2: {
         'img1': 'images/man.png',
@@ -15,7 +15,7 @@ const images = {
         'img3': 'images/briefcase.png',
 
         answer: 'RESERVIOR DOGS',
-        hint: '"Are you gonna bark all day little doggy or are you gonna bite?'
+        hint: 'Quote: "Are you gonna bark all day little doggy or are you gonna bite?"'
     },
     set3: {
         'img1': 'images/wrestler.png',
@@ -23,7 +23,7 @@ const images = {
         'img3': 'images/chips.jpg',
 
         answer: 'NACHO LIBRE',
-        hint: '"Do you not realize I have had diarrhea since Easters?"'
+        hint: 'Quote: "Do you not realize I have had diarrhea since Easters?"'
     },
     set4: {
         'img1': '',
@@ -143,10 +143,9 @@ function handleSubmit(evt) {
     render();
 }
 
-
 function handleHint(evt) {
 
-
+    swal.fire(imageSet.hint)
 
 
 }
