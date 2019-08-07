@@ -126,7 +126,6 @@ function render() {
 
 function handleSubmit(evt) {
     var checkAnswer = inputEl.value.toUpperCase();
-    console.log(checkAnswer)
     if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
         swal.fire({
@@ -140,6 +139,7 @@ function handleSubmit(evt) {
         })
     }
     count++
+    inputEl.value = '';
     render();
 }
 
