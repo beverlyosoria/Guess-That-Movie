@@ -16,6 +16,10 @@ body {
 
 }
 
+h1 {
+    align-content: center;
+}
+
 header {
     display: flex;
     align-items: center;

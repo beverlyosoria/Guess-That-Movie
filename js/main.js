@@ -129,10 +129,18 @@ function handleSubmit(evt) {
 
     if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
+        swal.fire({
+            type: 'success',
+            text: 'Correct!',
+        })
+
 
     } else {
 
-        console.log('wrong')
+        swal.fire({
+            type: 'error',
+            text: 'Try Again!',
+        })
     }
     count++
     render();
