@@ -1,8 +1,15 @@
 html * {
     box-sizing: border-box;
     margin: auto;
+    padding: auto;
     color: #2c2c2c;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", Cent
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #2c2c2c;
+    letter-spacing: .05em;
+
+
 }
 
 body {
@@ -14,20 +21,30 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(transparent, black) #d5d5d5;
-}
-
-#header {
-    display: flex;
-    justify-content: center;
+    background: radial-gradient(transparent, black) #d5d5d5af;
+    text-shadow:
+        2px 2px 0px #d5d5d5,
+        7px 7px 0px rgba(0, 0, 0, 0.2);
 
 }
+
+
+
 
 header {
+    display: flex;
     align-items: center;
     height: 5vh;
-    width: 100vmin;
+    width: 100%;
     justify-content: center;
+
+    font-size: 72px;
+    padding: 80px 50px;
+    text-align: center;
+    /* Text shadow effect */
+    text-shadow:
+        4px 4px 0px #d5d5d5,
+        7px 7px 0px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -44,23 +61,63 @@ img {
     height: 250px;
     padding: 0 40px 0 0;
     align-items: center;
+
 }
 
-/* Text shadow effect */
+/* background noise effect */
 
-h1 {
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    font-size: 92px;
-    padding: 80px 50px;
-    text-align: center;
-    text-transform: uppercase;
-    text-rendering: optimizeLegibility;
+body:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.16;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+}
 
-    color: #2c2c2c;
-    background: radial-gradient(transparent, black) #d5d5d5;
-    letter-spacing: .05em;
-    text-shadow:
-        4px 4px 0px #d5d5d5,
-        7px 7px 0px rgba(0, 0, 0, 0.2);
+@keyframes grain {
 
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
+    }
+
+    40% {
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
+    }
+
+    60% {
+        transform: translate(15%, 0%)
+    }
+
+    70% {
+        transform: translate(0%, 15%)
+    }
+
+    80% {
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
+    }
 }
