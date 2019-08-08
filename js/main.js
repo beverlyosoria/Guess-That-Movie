@@ -34,17 +34,17 @@ const images = {
         hint: ''
     },
     set5: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/priest.jpg',
+        'img2': 'images/zombie.jpg',
+        'img3': 'images/levitate.jpg',
 
-        answer: '',
+        answer: 'THE EXORCIST',
         hint: ''
     },
     set6: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/titanic.jpg',
+        'img2': 'images/iceburg.jpg',
+        'img3': 'images/girl.jpg',
 
         answer: '',
         hint: ''
