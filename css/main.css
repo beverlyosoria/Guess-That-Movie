@@ -3,8 +3,7 @@ html * {
     margin: auto;
     padding: auto;
     color: #2c2c2c;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    text-transform: uppercase;
+    font-family: 'Yesteryear', cursive;
     text-rendering: optimizeLegibility;
     color: #2c2c2c;
     letter-spacing: .05em;
@@ -12,33 +11,30 @@ html * {
 
 }
 
+
 body {
     display: flex;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto 1fr;
-    height: 100vh;
+    height: 100%;
     width: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: radial-gradient(transparent, black) #d5d5d5af;
-    text-shadow:
-        2px 2px 0px #d5d5d5,
-        7px 7px 0px rgba(0, 0, 0, 0.2);
+    /* text-shadow: 2px 2px 0px #d5d5d5,
+        7px 7px 0px rgba(0, 0, 0, 0.2); */
 
 }
 
-
-
-
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 5vh;
+    height: 50vh;
     width: 100%;
     justify-content: center;
-
-    font-size: 72px;
+    font-size: 92px;
     padding: 80px 50px;
     text-align: center;
     /* Text shadow effect */
@@ -52,27 +48,50 @@ main {
     display: flex;
     flex-direction: row;
     border-radius: 3vmin;
-    height: 50vh;
+    height: 40vh;
     justify-content: center;
 }
 
+footer {
+    height: 30vh;
+}
+
 img {
-    width: 280px;
-    height: 250px;
-    padding: 0 40px 0 0;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
     align-items: center;
 
+}
+
+input {
+    text-transform: uppercase;
+    width: 400px;
+    height: 50px;
+    border: 2px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: 2px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 /* background noise effect */
 
 body:after {
+    z-index: -1;
     animation: grain 8s steps(10) infinite;
     background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
     content: "";
     height: 300%;
     left: -50%;
-    opacity: 0.16;
+    opacity: 0.2;
     position: fixed;
     top: -110%;
     width: 300%;

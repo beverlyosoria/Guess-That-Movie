@@ -26,11 +26,11 @@ const images = {
         hint: 'Quote: "Do you not realize I have had diarrhea since Easters?"'
     },
     set4: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/jacket.jpg',
+        'img2': 'images/tobias.jpg',
+        'img3': 'images/bike.jpg',
 
-        answer: '',
+        answer: 'E.T.',
         hint: ''
     },
     set5: {
