@@ -88,16 +88,15 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
-let score, imageSet, guesses, count, width;
+let imageSet, guesses, count, width;
 
 /*----- cached element references -----*/
 // Set elements to variable 
-const imageEl = document.querySelectorAll('img');
+const imageEl = document.querySelectorAll('img'); //Create array of image tags
 const inputEl = document.getElementById('input')
 const guessesEL = document.getElementById('guesses');
 const progEl = document.getElementById('fill');
 
-// const filmEl = document.getElementById('film-container');
 
 /*----- event listeners -----*/
 document
@@ -113,9 +112,8 @@ init();
 
 // Initialize the variables 
 function init() {
-    score = 0;
     imageSet = images.set1;
-    count = 2;
+    count = 2; // use to dynamically change imageSet 
     guesses = 3;
     width = 10;
     render();
@@ -124,9 +122,13 @@ function init() {
 
 function render() {
 
-    imageEl.forEach(function (element, id) {
-        element.src = imageSet[`img${id + 1}`]
+    //Loops through image tags, sets element's source to imageSet
+    imageEl.forEach(function (image, id) {
+        //use string interperlation to use id provided by the loop to match the image property in imageSet 
+        image.src = imageSet[`img${id + 1}`]
     })
+    // elm set it's text content to equal to message
+    // string interperlation to dynamically display the value of my guesses variable
     guessesEL.textContent = `Number of guesses remaining: ${guesses}`;
     filmCountdown()
 
@@ -140,26 +142,33 @@ function filmCountdown() {
 
 
 function handleSubmit(evt) {
+    // Get input value, set to checkAnswer variable
     var checkAnswer = inputEl.value.toUpperCase();
+    // checks if imageSet is on set 10 alert congrats
     if (imageSet === images.set10) {
         swal.fire({
             type: 'success',
             text: 'Congratualtions!'
         })
+        //disallow user to enter answers
         inputEl.disabled = true;
+        // if user runs out of guesses alert game over
     } else if (guesses === 1) {
         swal.fire({
             type: 'error',
             text: 'Game Over!'
         })
         guesses = 0;
+        // disallow user to enter answers
         inputEl.disabled = true;
+        //if user input is correct, move on to next set using string interperlation with count var
     } else if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
         swal.fire({
             type: 'success',
             text: 'Correct!',
         })
+        //increase width of progress bar
         width += 10
         progEl.style.width = width + '%'
 
@@ -171,11 +180,11 @@ function handleSubmit(evt) {
         guesses = guesses - 1;
 
     }
-    count++
-    inputEl.value = '';
+    count++ //increment by 1
+    inputEl.value = ''; // reset input
     render();
 }
 
 function handleHint(evt) {
-    swal.fire(imageSet.hint)
+    swal.fire(imageSet.hint) //access image hint property
 }

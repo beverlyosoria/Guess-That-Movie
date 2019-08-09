@@ -60,16 +60,16 @@ main {
     padding: 30px 0;
     justify-content: center;
     border: solid 30px;
-    box-shadow: 0 0 20px 0 white;
+    box-shadow: 0 0 40px 0 white;
 }
 
 footer {
     justify-content: center;
     align-items: center;
     font-family: 'Yesteryear';
-    height: 20vmin;
+    height: 24vmin;
     padding: 20px;
-    border: solid;
+    border: 5px solid;
     border-radius: 8px;
 
 }
@@ -79,8 +79,9 @@ img {
     height: 30vmin;
     margin: 20px;
     align-items: center;
-
+    box-shadow: 0 0 30px 0px white;
 }
+
 
 input {
     text-transform: uppercase;
@@ -106,9 +107,10 @@ button {
 }
 
 #fill {
-    width: 10%;
+    width: 11%;
     background-color: green;
     float: left;
+    font-size: 20px;
 
 }
 
@@ -133,7 +135,7 @@ svg {
     left: 0;
     width: 118vmin;
     height: 49vmin;
-    margin: 24.5vmin 37vmin;
+    margin: 24.5vmin 34vmin;
     background-color: #DAD5C2;
     border-radius: 3vmin;
 }

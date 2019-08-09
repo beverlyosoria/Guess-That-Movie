@@ -1,24 +1,24 @@
-#Guess That Movie Game 
+# Guess That Movie  
 
-##Overview
+## Overview
+Guess That Movie is a game in which the player is prompted with three images that are symbolic of a movie. The user must guess the movie title to move on to the next set of images. The player wins when all movie titles are guessed correctly.
+
+## Wireframe
 
 
-##How to Play
+
+## Screenshots
 
 
-##Screenshots
-
-##Pseudocode
+## Pseudocode
 
 1. Display 3 images that represent a movie
  
 2. Record the turn number the player is on. Start it on 1.
 	
-3. Provide the player with a textbox to guess what movie is being represented.
+3. Provide the player with a textbox to input the title of the movie being represented.
 
-4. Provide the player with button to receive a hint to the answer
-
-4. When guess has been submitted record it.
+4. Provide the player with a button to receive a hint to the answer
 
 5. Next, check if movie titled guessed is the correct title. 
 
@@ -39,13 +39,14 @@
 
 9. When game restarts, go back to step 1.  
 
-##Technologies Used
-JavaScript, HTML, CSS
+## Technologies Used
+JavaScript, HTML, CSS, SweetAlert
 
-## Getting Started
+## Stretch Goals
+* Add sound effects
+* Hint option for either fact or quote 
 
+## Next Steps
+* Expand the game with multiple genres
+* Levels of difficulty
 
-##Authors
-
-
-##Next Steps
