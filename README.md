@@ -5,39 +5,42 @@ Guess That Movie is a game in which the player is prompted with three images tha
 
 ## Wireframe
 
-
+![image description](../master/images/wireframe.jpg)
 
 ## Screenshots
+
+![image description](../master/images/1.jpg)
+![image description](../master/images/2.jpg)
+![image description](../master/images/3.jpg)
+![image description](../master/images/4.jpg)
 
 
 ## Pseudocode
 
 1. Display 3 images that represent a movie
- 
-2. Record the turn number the player is on. Start it on 1.
 	
-3. Provide the player with a textbox to input the title of the movie being represented.
+2. Provide the player with a textbox to input the title of the movie being represented.
 
-4. Provide the player with a button to receive a hint to the answer
+3. Provide the player with a button to receive a hint to the answer
 
-5. Next, check if movie titled guessed is the correct title. 
+4. Next, check if movie titled guessed is the correct title. 
 
-6. If it is correct: 
+5. If it is correct: 
 	
 	1. Display "Correct" message.
 	
 	2. Move on to next level and display 3 images.
 
-7. If it is wrong:
+6. If it is wrong:
 	1. Display "Wrong" message.
 	2. Allow them to enter another guess.
 
-8. 	If it is wrong and the player has no turns left:
+7. 	If it is wrong and the player has no turns left:
 	1. Display "Game Over' message.
 	2. Disallow player from entering more guesses.
 	3. Display button allowing the player to restart the game.
 
-9. When game restarts, go back to step 1.  
+8. When game restarts, go back to step 1.  
 
 ## Technologies Used
 JavaScript, HTML, CSS, SweetAlert

@@ -58,12 +58,12 @@ const images = {
         hint: 'Quote: Lions, and tigers, and bears! Oh, my!'
     },
     set8: {
-        'img1': 'images/yellowbrick.jpg',
-        'img2': 'images/redshoes.jpg',
-        'img3': 'images/scarecrow.jpg',
+        'img1': 'images/vietnam.jpg',
+        'img2': 'images/chocbox.jpg',
+        'img3': 'images/runman.png',
 
-        answer: 'WIZARD OF OZ',
-        hint: 'Quote: Lions, and tigers, and bears! Oh, my!'
+        answer: 'FORREST GUMP',
+        hint: 'Quote: "When I got tired, I slept. When I got hungry, I ate. When I had to go, you know, I went.!"'
     },
 
     set9: {
@@ -122,7 +122,7 @@ function init() {
 
 function render() {
 
-    //Loops through image tags, sets element's source to imageSet
+    //Loop through image tags, set element's source to imageSet
     imageEl.forEach(function (image, id) {
         //use string interperlation to use id provided by the loop to match the image property in imageSet 
         image.src = imageSet[`img${id + 1}`]
@@ -148,17 +148,18 @@ function handleSubmit(evt) {
     if (imageSet === images.set10) {
         swal.fire({
             type: 'success',
-            text: 'Congratualtions!'
+            text: 'Congratualtions! You Won!'
         })
         //disallow user to enter answers
         inputEl.disabled = true;
-        // if user runs out of guesses alert game over
+        // if user runs out of guesses alert prompts game over
     } else if (guesses === 1) {
         swal.fire({
             type: 'error',
             text: 'Game Over!'
         })
         guesses = 0;
+
         // disallow user to enter answers
         inputEl.disabled = true;
         //if user input is correct, move on to next set using string interperlation with count var
@@ -186,5 +187,5 @@ function handleSubmit(evt) {
 }
 
 function handleHint(evt) {
-    swal.fire(imageSet.hint) //access image hint property
+    swal.fire(imageSet.hint) //access image hint property display the message
 }
