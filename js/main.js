@@ -83,9 +83,10 @@ let score, imageSet, answers, guesses, count;
 
 /*----- cached element references -----*/
 // Set elements to variable 
-const guessesEL = document.getElementById('guesses');
 const imageEl = document.querySelectorAll('img');
 const inputEl = document.getElementById('input')
+const guessesEL = document.getElementById('guesses');
+// const filmEl = document.getElementById('film-container');
 
 /*----- event listeners -----*/
 document
@@ -122,7 +123,17 @@ function render() {
         element.src = imageSet[`img${id + 1}`]
     })
     guessesEL.textContent = `Number of guesses remaining: ${guesses}`;
+    filmCountdown()
+
 }
+
+function filmCountdown() {
+    setTimeout(function () {
+        document.getElementById('film-container').style.display = 'none';
+    }, 3000);
+
+}
+
 
 function handleSubmit(evt) {
     var checkAnswer = inputEl.value.toUpperCase();
