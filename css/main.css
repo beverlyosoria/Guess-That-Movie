@@ -15,7 +15,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto 1fr;
     height: 100%;
-    width: 100vh;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -29,10 +29,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20vh;
+    height: 20vmin;
     width: 100%;
     justify-content: center;
     padding: 30px 0 10PX;
+    margin-bottom: 4vmin;
 }
 
 h1 {
@@ -54,8 +55,8 @@ main {
     display: flex;
     flex-direction: row;
     border-radius: 3vmin;
-    height: 40vh;
-    width: 80vh;
+    height: 50vmin;
+    width: 120vmin;
     padding: 30px 0;
     justify-content: center;
     border: solid 30px;
@@ -66,7 +67,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: 'Yesteryear';
-    height: 12vh;
+    height: 20vmin;
     padding: 20px;
     border: solid;
     border-radius: 8px;
@@ -74,8 +75,8 @@ footer {
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 30vmin;
+    height: 30vmin;
     margin: 20px;
     align-items: center;
 
@@ -99,6 +100,18 @@ button {
     font-size: 25px;
 }
 
+.progbar {
+    background-color: grey;
+
+}
+
+#fill {
+    width: 10%;
+    background-color: green;
+    float: left;
+
+}
+
 
 
 svg {
@@ -118,10 +131,9 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%;
-    height: 39.5%;
-    margin-left: 578px;
-    margin-top: 195px;
+    width: 118vmin;
+    height: 49vmin;
+    margin: 24.5vmin 37vmin;
     background-color: #DAD5C2;
     border-radius: 3vmin;
 }

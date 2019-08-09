@@ -23,7 +23,7 @@ const images = {
         'img3': 'images/chips.jpg',
 
         answer: 'NACHO LIBRE',
-        hint: 'Quote: "Do you not realize I have had diarrhea since Easters?"'
+        hint: 'Quote: "Do you remember that one time when everyone was shouting my name, and I used my strength to rip my blouse?"'
     },
     set4: {
         'img1': 'images/jacket.jpg',
@@ -31,7 +31,7 @@ const images = {
         'img3': 'images/bike.jpg',
 
         answer: 'E.T.',
-        hint: ''
+        hint: 'Fact: Steven Spielberg shot most of this film from the eye-level of a child.'
     },
     set5: {
         'img1': 'images/priest.jpg',
@@ -39,39 +39,48 @@ const images = {
         'img3': 'images/levitate.jpg',
 
         answer: 'THE EXORCIST',
-        hint: ''
+        hint: 'Fact: It is based on a true story.'
     },
     set6: {
         'img1': 'images/titanic.jpg',
         'img2': 'images/iceburg.jpg',
         'img3': 'images/girl.jpg',
 
-        answer: '',
-        hint: ''
+        answer: 'TITANIC',
+        hint: 'Quote: “Jack, I want you to draw me like one of your French girls.” '
     },
     set7: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/yellowbrick.jpg',
+        'img2': 'images/redshoes.jpg',
+        'img3': 'images/scarecrow.jpg',
 
-        answer: '',
-        hint: ''
+        answer: 'WIZARD OF OZ',
+        hint: 'Quote: Lions, and tigers, and bears! Oh, my!'
     },
-    set9: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+    set8: {
+        'img1': 'images/yellowbrick.jpg',
+        'img2': 'images/redshoes.jpg',
+        'img3': 'images/scarecrow.jpg',
 
-        answer: '',
-        hint: ''
+        answer: 'WIZARD OF OZ',
+        hint: 'Quote: Lions, and tigers, and bears! Oh, my!'
+    },
+
+    set9: {
+        'img1': 'images/bruce.jpg',
+        'img2': 'images/bride.jpg',
+        'img3': 'images/sword.jpg',
+
+        answer: 'KILL BILL',
+        hint: 'Quote: "You might not be able to fight like a samurai, but you can at least die like a samurai."'
     },
     set10: {
-        'img1': '',
-        'img2': '',
-        'img3': '',
+        'img1': 'images/mask.jpg',
+        'img2': 'images/moth.jpg',
+        'img3': 'images/straitjacket.jpg',
 
-        answer: '',
-        hint: ''
+        answer: 'SILENCE OF THE LAMBS',
+        hint: 'Quote: "Whenever feasible, one should always try to eat the rude."'
     },
 }
 
@@ -79,13 +88,15 @@ const images = {
 
 /*----- app's state (variables) -----*/
 
-let score, imageSet, answers, guesses, count;
+let score, imageSet, guesses, count, width;
 
 /*----- cached element references -----*/
 // Set elements to variable 
 const imageEl = document.querySelectorAll('img');
 const inputEl = document.getElementById('input')
 const guessesEL = document.getElementById('guesses');
+const progEl = document.getElementById('fill');
+
 // const filmEl = document.getElementById('film-container');
 
 /*----- event listeners -----*/
@@ -103,16 +114,10 @@ init();
 // Initialize the variables 
 function init() {
     score = 0;
-
     imageSet = images.set1;
-
-    answers = [];
-
-    hint = [];
-
     count = 2;
-
     guesses = 3;
+    width = 10;
     render();
 }
 
@@ -131,26 +136,33 @@ function filmCountdown() {
     setTimeout(function () {
         document.getElementById('film-container').style.display = 'none';
     }, 3000);
-
 }
 
 
 function handleSubmit(evt) {
     var checkAnswer = inputEl.value.toUpperCase();
-    if (guesses === 1) {
+    if (imageSet === images.set10) {
+        swal.fire({
+            type: 'success',
+            text: 'Congratualtions!'
+        })
+        inputEl.disabled = true;
+    } else if (guesses === 1) {
         swal.fire({
             type: 'error',
             text: 'Game Over!'
         })
         guesses = 0;
         inputEl.disabled = true;
-    } else
-    if (checkAnswer === imageSet.answer) {
+    } else if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
         swal.fire({
             type: 'success',
             text: 'Correct!',
         })
+        width += 10
+        progEl.style.width = width + '%'
+
     } else {
         swal.fire({
             type: 'error',
@@ -165,8 +177,5 @@ function handleSubmit(evt) {
 }
 
 function handleHint(evt) {
-
     swal.fire(imageSet.hint)
-
-
 }
