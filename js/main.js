@@ -137,6 +137,14 @@ function filmCountdown() {
 
 function handleSubmit(evt) {
     var checkAnswer = inputEl.value.toUpperCase();
+    if (guesses === 1) {
+        swal.fire({
+            type: 'error',
+            text: 'Game Over!'
+        })
+        guesses = 0;
+        inputEl.disabled = true;
+    } else
     if (checkAnswer === imageSet.answer) {
         imageSet = images[`set${count}`]
         swal.fire({
@@ -148,6 +156,8 @@ function handleSubmit(evt) {
             type: 'error',
             text: 'Try Again!',
         })
+        guesses = guesses - 1;
+
     }
     count++
     inputEl.value = '';

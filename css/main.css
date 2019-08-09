@@ -58,15 +58,18 @@ main {
     width: 80vh;
     padding: 30px 0;
     justify-content: center;
-    border: solid;
+    border: solid 30px;
+    box-shadow: 0 0 20px 0 white;
 }
 
 footer {
     justify-content: center;
     align-items: center;
     font-family: 'Yesteryear';
-    height: 30vh;
+    height: 12vh;
     padding: 20px;
+    border: solid;
+    border-radius: 8px;
 
 }
 
@@ -115,9 +118,9 @@ svg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 46%;
+    width: 40%;
     height: 39.5%;
-    margin-left: 455px;
+    margin-left: 578px;
     margin-top: 195px;
     background-color: #DAD5C2;
     border-radius: 3vmin;
