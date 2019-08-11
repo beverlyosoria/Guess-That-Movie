@@ -54,4 +54,3 @@ JavaScript, HTML, CSS, SweetAlert
 ## Next Steps
 * Expand the game with multiple genres
 * Levels of difficulty
-
