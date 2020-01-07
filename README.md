@@ -1,6 +1,6 @@
 # Guess That Movie
 
-[Guess That Movie](https://beverlyosoria.github.io/Unit-1-Project/)
+[Guess That Movie](http://moviegame.surge.sh/)
 
 ## Overview
 Guess That Movie is a game in which the player is prompted with three images that are symbolic of a movie. The user must guess the movie title to move on to the next set of images. The player wins when all movie titles are guessed correctly.
