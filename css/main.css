@@ -1,271 +1,194 @@
-html * {
-    box-sizing: border-box;
-    margin: auto;
-    padding: auto;
-    color: #2c2c2c;
-    font-family: 'Yesteryear', cursive;
-    text-rendering: optimizeLegibility;
-    color: #2c2c2c;
-    letter-spacing: .06em;
+html {
+  color: #2c2c2c;
 }
-
 
 body {
-    display: flex;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 1fr;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(transparent, black) #d5d5d5af;
-    /* text-shadow: 2px 2px 0px #d5d5d5,
-        7px 7px 0px rgba(0, 0, 0, 0.2); */
-
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 20vmin;
-    width: 100%;
-    justify-content: center;
-    padding: 30px 0 10PX;
-    margin-bottom: 4vmin;
+  background-color: black;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
-    font-size: 80px;
-    text-align: center;
-    /* Text shadow effect */
-    text-shadow:
-        4px 4px 0px #d5d5d5,
-        7px 7px 0px rgba(0, 0, 0, 0.2);
+  font-family: "Limelight", cursive;
+  font-size: 80px;
+  text-align: center;
+  color: gray;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
 h3 {
-    font-size: 30px;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 300;
+}
+h2 {
+  font-weight: 300;
+}
 
-
+header {
+  float: center;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    border-radius: 3vmin;
-    height: 50vmin;
-    width: 120vmin;
-    padding: 30px 0;
-    justify-content: center;
-    border: solid 30px;
-    box-shadow: 0 0 40px 0 white;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/frame.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-footer {
-    justify-content: center;
-    align-items: center;
-    font-family: 'Yesteryear';
-    height: 24vmin;
-    padding: 20px;
-    border: 5px solid;
-    border-radius: 8px;
-    text-shadow: 2px 2px 0px #bdb9b9,
-        7px 9px 0px rgba(0, 0, 0, 0.2);
-
-
+div.images-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 25% 15% 5% 16%;
 }
 
 img {
-    width: 30vmin;
-    height: 30vmin;
-    margin: 20px;
-    align-items: center;
-    box-shadow: 0 0 40px 0px white;
+  width: 30vmin;
+  height: 30vmin;
+  box-shadow: 0 0 40px 0px white;
 }
 
+div.game-content {
+  float: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10%;
+}
 
 input {
-    text-transform: uppercase;
-    width: 400px;
-    height: 38px;
-    border: 2px;
-    border-radius: 5px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+  text-transform: uppercase;
+  width: 500px;
+  height: 38px;
+  border: 2px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 button {
-    width: 100px;
-    height: 40px;
-    border: 2px;
-    border-radius: 5px;
-    font-size: 25px;
-
+  width: 100px;
+  height: 40px;
+  border: 2px;
+  border-radius: 5px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+}
+#submit {
+  margin-left: 1em;
 }
 
+/* Progress Bar */
 .progbar {
-    background-color: grey;
-
+  background-color: grey;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 #fill {
-    width: 11%;
-    background-color: green;
-    float: left;
-    font-size: 20px;
-
+  width: 11%;
+  background-color: green;
+  font-size: 20px;
+  font-weight: 300;
 }
+/* End of Progress bar */
 
-
-
+/* Film Countdown */
 svg {
-    display: inline-block;
+  display: inline-block;
 }
 
 .no-select {
-    cursor: default;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+  cursor: default;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-#film-countdown,
-#message-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 118vmin;
-    height: 49vmin;
-    margin: 24.5vmin 34vmin;
-    background-color: #DAD5C2;
-    border-radius: 3vmin;
+#film-countdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120vmin;
+  height: 50vmin;
+  margin: 25vmin 34vmin;
+  background-color: #dad5c2;
+  border-radius: 3vmin;
 }
 
-#numbers text {
-    fill: black;
-    font: bold 80px Arial, sans-serif;
-    opacity: 0;
+#film-numbers text {
+  fill: black;
+  font: bold 80px Arial, sans-serif;
+  opacity: 0;
 }
 
 .circle01 {
-    fill: none;
-    stroke: #111;
-    stroke-width: 1.5px;
+  fill: none;
+  stroke: #111;
+  stroke-width: 1.5px;
 }
 
 .circle02 {
-    fill: none;
-    stroke: rgba(0, 0, 0, 0.3);
-    stroke-dasharray: 1 3200;
-    stroke-width: 989;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-dasharray: 1 3200;
+  stroke-width: 989;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }
+/* End of Film Countdown */
 
-/*** END RADIO DIAL ***/
-
+/* Radio Dial */
 .animated-rotate {
-    /* rotations */
-    animation: rotate 1s 3;
+  /* rotations */
+  animation: rotate 1s 3;
 }
 
 #animated-text1 {
-    animation: countdown 1s 1;
-    animation-delay: 0s;
+  animation: countdown 1s 1;
+  animation-delay: 0s;
 }
 
 #animated-text2 {
-    animation: countdown 1s 1;
-    animation-delay: 1s;
+  animation: countdown 1s 1;
+  animation-delay: 1s;
 }
 
 #animated-text3 {
-    animation: countdown 1s 1;
-    animation-delay: 2s;
+  animation: countdown 1s 1;
+  animation-delay: 2s;
 }
 
-
 @keyframes countdown {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    99% {
-        opacity: 1;
-    }
+  99% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes rotate {
-
-    100% {
-        stroke-dasharray: 3200 0;
-    }
+  100% {
+    stroke-dasharray: 3200 0;
+  }
 }
-
-
+/* End of Radio Dial */
 
 /* background noise effect */
-
-body:after {
-    z-index: -1;
-    animation: grain 8s steps(10) infinite;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
-    content: "";
-    height: 300%;
-    left: -50%;
-    opacity: 0.3;
-    position: fixed;
-    top: -110%;
-    width: 300%;
-}
-
-@keyframes grain {
-
-    0%,
-    100% {
-        transform: translate(0, 0)
-    }
-
-    10% {
-        transform: translate(-5%, -10%)
-    }
-
-    20% {
-        transform: translate(-15%, 5%)
-    }
-
-    30% {
-        transform: translate(7%, -25%)
-    }
-
-    40% {
-        transform: translate(-5%, 25%)
-    }
-
-    50% {
-        transform: translate(-15%, 10%)
-    }
-
-    60% {
-        transform: translate(15%, 0%)
-    }
-
-    70% {
-        transform: translate(0%, 15%)
-    }
-
-    80% {
-        transform: translate(3%, 35%)
-    }
-
-    90% {
-        transform: translate(-10%, 10%)
-    }
-}
